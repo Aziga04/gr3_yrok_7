@@ -12,6 +12,7 @@ import com.example.gr3_yrok_7.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
+    private lateinit var adaptor: Adaptor
     private  var list = arrayListOf<Madel>()
 
     companion object{
@@ -29,21 +30,26 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        list.clear()
         loadDatata()
-        val adaptor = Adaptor(list, this::onClick)
+
+         adaptor = Adaptor(list, this::onClick)
         binding.resalcler.adapter = adaptor
 
     }
 
-    private fun loadDatata() {
-        list.add(Madel("rici","alive", R.drawable._image_))
-        list.add(Madel("rici","alive", R.drawable.image_1))
-        list.add(Madel("rici","alive", R.drawable.image_2))
-        list.add(Madel("rici","alive",R.drawable.image_3))
+    private fun onClick(position: Int) {
+        findNavController().navigate(R.id.secondFragment, bundleOf(KEY to list[position]))
+
     }
 
-    private fun onClick(position: Int) {
-        findNavController().navigate(R.id.secondFragment, bundleOf(KEY to list [position]))
+    private fun loadDatata() {
+        list.add(Madel("Rick Sanchez","Alive", R.drawable._image_))
+        list.add(Madel("Morty Smith","Alive", R.drawable.image_1))
+        list.add(Madel("Albert Einstein","Dead", R.drawable.image_2))
+        list.add(Madel("Jerry Smith","Alive",R.drawable.image_3))
     }
+
+
 
 }

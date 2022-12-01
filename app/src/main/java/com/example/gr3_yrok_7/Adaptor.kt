@@ -27,9 +27,9 @@ class Adaptor(
             itemView.setOnClickListener {
                 onClick(position)
             }
-            binding.imgIt.setImageResource(madel.image)
+            binding.ivAvatar.setImageResource(madel.image)
             binding.tvName.text = madel.name
-            binding.ali.text = madel.alive
+            binding.tvStatus.text = madel.alive
 
         }
     }

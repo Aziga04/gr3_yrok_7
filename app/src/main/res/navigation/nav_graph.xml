@@ -5,15 +5,22 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/mainFragment">
 
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.gr3_yrok_7.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_mainFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.gr3_yrok_7.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
-    <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.gr3_yrok_7.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+
 </navigation>
