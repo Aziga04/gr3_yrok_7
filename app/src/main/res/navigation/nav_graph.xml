@@ -21,6 +21,10 @@
         android:id="@+id/secondFragment"
         android:name="com.example.gr3_yrok_7.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second" >
+
+        <argument android:name="картинки"
+            app:argType="java.io.Serializable"/>
+    </fragment>
 
 </navigation>

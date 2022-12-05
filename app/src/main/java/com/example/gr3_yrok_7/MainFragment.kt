@@ -46,8 +46,8 @@ class MainFragment : Fragment() {
     private fun loadDatata() {
         list.add(Madel("Rick Sanchez","Alive", R.drawable._image_))
         list.add(Madel("Morty Smith","Alive", R.drawable.image_1))
-        list.add(Madel("Albert Einstein","Dead", R.drawable.image_2))
-        list.add(Madel("Jerry Smith","Alive",R.drawable.image_3))
+        list.add(Madel("Albert Einstein","Dead", R.drawable.img_3))
+        list.add(Madel("Jerry Smith","Alive",R.drawable.img_2))
     }
 
 
